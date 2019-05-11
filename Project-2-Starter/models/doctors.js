@@ -2,7 +2,7 @@
 // This is the model used when a doctor is registering on the website
 //-----------------------------------------------------------------
 module.exports = function(sequelize, DataTypes) {
-  var  Doctors = sequelize.define("Doctor", {
+  var  Doctors = sequelize.define("Doctors", {
     name: DataTypes.STRING,
     speciality: DataTypes.STRING,
     location: DataTypes.STRING,

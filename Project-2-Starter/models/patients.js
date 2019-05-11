@@ -2,7 +2,7 @@
 // This is the model used when the doctor is creating a patient profile 
 //-----------------------------------------------------
 module.exports = function(sequelize, DataTypes) {
-    var  Patients = sequelize.define("Patient", {
+    var  Patients = sequelize.define("Patients", {
       name: DataTypes.STRING,
       doctor: DataTypes.STRING,
       address: DataTypes.STRING,
