@@ -5,7 +5,7 @@ module.exports = function(sequelize, DataTypes) {
     var  Patients = sequelize.define("Patients", {
       name: DataTypes.STRING,
       doctor: DataTypes.STRING,
-      address: DataTypes.STRING,
+      city: DataTypes.STRING,
       phone: DataTypes.TEXT,
       email: DataTypes.STRING,
       healthCard: DataTypes.TEXT
