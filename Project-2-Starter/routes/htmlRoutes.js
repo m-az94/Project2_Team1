@@ -20,14 +20,19 @@ module.exports = function(app) {
   app.get("/doctor/SignIn", function(req, res) {
     res.render("doctorSignIn");
   });
-  
   // Doctor - sign up
   app.get("/doctor/SignUp", function(req, res){
     res.render("doctorSignUp");
   });
-  
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");
+  });
+
+  //------------------------------------------------------------------
+  // PATIENT PAGES
+  //------------------------------------------------------------------
+  app.get("/patient/SignUp", function(req, res) {
+    res.render("patientSignIn");
   });
 };
