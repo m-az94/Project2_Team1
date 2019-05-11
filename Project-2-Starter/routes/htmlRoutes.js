@@ -2,10 +2,10 @@ var db = require("../models");
 var path = require("path");
 
 module.exports = function (app) {
+  
   // Load index page
-  app.get("/", function (req, res) {
-    res.render("patientProfile");
-  });
+  app.get("/", function(req, res) {
+    res.render("index");
 
   //------------------------------------------------------------------
   // DOCTORS PAGES
@@ -35,6 +35,11 @@ module.exports = function (app) {
   app.get("/patient/SignIn", function (req, res) {
     res.render("patientSignIn");
   });
+
+  app.get("/doctor/:id/confirmPatient", function(req, res){
+    res.render("confirmPatient");
+  });
+
 
   // Render 404 page for any unmatched routes
   app.get("*", function (req, res) {
