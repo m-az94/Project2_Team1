@@ -9,15 +9,12 @@ module.exports = function(sequelize, DataTypes) {
     });
   
     Prescriptions.associate=function(models){
-      Prescription.belongsTo(models.Patients,{
+      Prescriptions.belongsTo(models.Patients,{
         foreignKey: {
             allowNull: false
         }
       });
-      Prescription.hasMany(models.Journal,{
-        onDelete: "" // figure it out
-      });
-      Prescription.hasMany(models.Adherence,{
+      Prescriptions.hasMany(models.Journal,{
         onDelete: "" // figure it out
       });
     };
