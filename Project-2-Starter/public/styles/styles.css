@@ -1,6 +1,55 @@
-.list-group-item {
-  line-height: 2.5;
+/* Main */
+body {
+  background: #0AA7E4;
+}
+#header{
+  background: #FFF;
+  height: 50px;
+  padding: 5px;
+}
+#logo{
+  text-align: center;
 }
 #hippologo{
-  height: 10%;
+  height: 45px;
 }
+.navigation{
+  position: fixed;
+  padding-top: 20px;
+  font-size: 20px;
+  text-align: right;
+}
+.body {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 30px;
+  background: #FFF;
+}
+/* Index */
+
+/* ___DOCTOR__SIDE___ */
+
+/* Doctor Sign Up */
+
+/* Sign In */
+
+/* Create Patient */
+
+/* Confirm Patient */
+
+/* Doctor Profile */
+
+/* Delete Patient */
+
+/* Doctor View Patient Profile */
+
+/* ___PATIENT__SIDE___ */
+
+/* Patient Sign In */
+
+/* Patient Options */
+
+/* Patient Diary */
+
+/* Patient Profile */
+

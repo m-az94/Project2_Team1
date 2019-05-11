@@ -4,7 +4,7 @@ var path = require("path");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    res.render("index");
+    res.render("patientProfile");
   });
 
   //------------------------------------------------------------------
@@ -25,7 +25,12 @@ module.exports = function(app) {
   app.get("/doctor/SignUp", function(req, res){
     res.render("doctorSignUp");
   });
-  
+
+  // Doctor - create patient
+  app.get("/doctor/:id/createPatient", function(req, res){
+    res.render("createPatient");
+  });
+
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");
