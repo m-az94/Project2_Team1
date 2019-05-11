@@ -2,11 +2,12 @@ var db = require("../models");
 var path = require("path");
 
 module.exports = function (app) {
+  
   // Load index page
   app.get("/", function (req, res) {
     res.render("index");
   });
-
+  
   //------------------------------------------------------------------
   // DOCTORS PAGES
   //------------------------------------------------------------------
@@ -29,6 +30,11 @@ module.exports = function (app) {
   app.get("/doctor/:id/createpatient", function (req, res) {
     res.render("createPatient");
   });
+  
+   app.get("/doctor/:id/confirmPatient", function(req, res){
+    res.render("confirmPatient");
+  });
+
   //------------------------------------------------------------------
   // PATIENT PAGES
   //------------------------------------------------------------------
@@ -36,10 +42,12 @@ module.exports = function (app) {
     res.render("patientSignIn");
   });
 
+
   app.get("/patient/:id/options", function (req, res) {
     var testId = { userFirstName: "test user" };
     res.render("patientOptions", testId);
   });
+
 
   // Render 404 page for any unmatched routes
   app.get("*", function (req, res) {
