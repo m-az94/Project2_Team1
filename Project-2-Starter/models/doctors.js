@@ -5,8 +5,8 @@ module.exports = function(sequelize, DataTypes) {
   var  Doctors = sequelize.define("Doctors", {
     name: DataTypes.STRING,
     speciality: DataTypes.STRING,
-    location: DataTypes.STRING,
-    MIN: DataTypes.TEXT
+    city: DataTypes.STRING,
+    MINC: DataTypes.TEXT
   });
 
   Doctors.associate=function(models){
