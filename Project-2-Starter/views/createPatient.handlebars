@@ -1,14 +1,18 @@
-{{!-- Patient Profile --}}
+{{!-- Create Patient --}}
 <form class="body">
     <label>Name: </label>
-    <input type="text" class="form-control" placeholder="Enter patient's name here" id="name"><br>
+    <input type="text" class="form-control" placeholder="Enter patient's name here" id="p-name"><br>
     <label>Phone Number: </label>
-    <input type="text" class="form-control" placeholder="Enter patient's phone number here" id="phone"><br>
+    <input type="text" class="form-control" placeholder="Enter patient's phone number here" id="p-phone"><br>
     <label>City: </label>
-    <input type="text" class="form-control" placeholder="Enter patient's address here" id="city"><br>
+    <input type="text" class="form-control" placeholder="Enter patient's address here" id="p-city"><br>
     <label>Email: </label>
-    <input type="text" class="form-control" placeholder="Enter patient's email here" id="email"><br>
+    <input type="text" class="form-control" placeholder="Enter patient's email here" id="p-email"><br>
     <label>Health Card Number: </label>
-    <input type="text" class="form-control" placeholder="Enter patient's healthcard number here" id="healthcard"><br>
+    <input type="text" class="form-control" placeholder="Enter patient's healthcard number here" id="p-healthcard"><br>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
+
+{{!-- Notes for Alexis 
+-> Don't do ajax call for this page! Submit for this page goes to confirmPatient.handlebars!
+--}}
