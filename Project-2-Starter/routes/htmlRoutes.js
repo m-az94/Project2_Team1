@@ -35,6 +35,9 @@ module.exports = function(app) {
     res.render("confirmPatient");
   });
 
+  app.get("/doctor/:id/profile", function(req, res){
+    res.render("doctorProfile");
+  });
 
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
