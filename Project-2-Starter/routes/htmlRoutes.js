@@ -7,7 +7,7 @@ module.exports = function (app) {
   app.get("/", function (req, res) {
     res.render("index");
   });
-  
+
   //------------------------------------------------------------------
   // DOCTORS PAGES
   //------------------------------------------------------------------
@@ -30,10 +30,15 @@ module.exports = function (app) {
   app.get("/doctor/:id/createpatient", function (req, res) {
     res.render("createPatient");
   });
-  
+
+  // Doctor - confirm patient
    app.get("/doctor/:id/confirmPatient", function(req, res){
     res.render("confirmPatient");
   });
+  
+  // Doctor - profile
+  app.get("/doctor/:id/profile", function(req, res){
+    res.render("doctorProfile");
 
   //------------------------------------------------------------------
   // PATIENT PAGES
@@ -48,9 +53,13 @@ module.exports = function (app) {
     res.render("patientOptions", testId);
   });
 
+  //------------------------------------------------------------------
+  // OTHER PAGES
+  //------------------------------------------------------------------
 
   // Render 404 page for any unmatched routes
   app.get("*", function (req, res) {
     res.render("404");
   });
+
 };

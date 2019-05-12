@@ -38,6 +38,9 @@ body {
 /* Confirm Patient */
 
 /* Doctor Profile */
+.patientBtn{
+  width: 100%;
+}
 
 /* Delete Patient */
 
