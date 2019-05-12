@@ -1,0 +1,20 @@
+<form class="body">
+    <h2>Create a Diary Entry</h2>
+    <p>Select a drug: </p>
+    {{#each prescription}}
+        <input type="radio" name="{{patientID}}" value="{{drug_name}}"><label> {{drug_name}}</label> <br>
+    {{/each}}
+
+    <br><br>
+
+    <p>Have you taken your prescription {{frequency}} times today?</p>
+    <input type="radio" name="freqCheck" value="true"><label> Yes</label><br>
+    <input type="radio" name="freqCheck" value="false"><label> No</label><br>
+
+    <br><br>
+    
+    <p>Comments/Concerns</p>
+    <input type="text" id="newDiary" class="form-control">
+    <br>
+    <button type="submit" id="submitDiary" class="btn btn-primary">Submit</button>
+</form>
