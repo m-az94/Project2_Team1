@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "mama546494",
+    "password": "password",
     "database": "healthcare_db",
     "host": "localhost",
     "dialect": "mysql"
