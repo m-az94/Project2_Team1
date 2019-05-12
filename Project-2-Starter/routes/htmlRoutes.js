@@ -40,6 +40,10 @@ module.exports = function (app) {
   app.get("/doctor/:id/profile", function(req, res){
     res.render("doctorProfile");
 
+  app.get("/doctor/:id/patient/:id/delete", function(req, res){
+    res.render("deletePatient");
+  });
+  
   //------------------------------------------------------------------
   // PATIENT PAGES
   //------------------------------------------------------------------
