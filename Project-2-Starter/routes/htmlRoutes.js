@@ -21,6 +21,7 @@ module.exports = function (app) {
   app.get("/doctor/signin", function (req, res) {
     res.render("doctorSignIn");
   });
+
   // Doctor - sign up
   app.get("/doctor/signup", function (req, res) {
     res.render("doctorSignUp");
@@ -39,31 +40,45 @@ module.exports = function (app) {
   // Doctor - profile
   app.get("/doctor/:id/profile", function(req, res){
     res.render("doctorProfile");
+  });
 
+  // Doctor - delete patient
   app.get("/doctor/:id/patient/:id/delete", function(req, res){
     res.render("deletePatient");
   });
-  
+
   //------------------------------------------------------------------
   // PATIENT PAGES
   //------------------------------------------------------------------
+
+  // Patient - sign in
   app.get("/patient/signin", function (req, res) {
     res.render("patientSignIn");
   });
 
-
+  // Patient - options
   app.get("/patient/:id/options", function (req, res) {
     var testId = { userFirstName: "test user" };
     res.render("patientOptions", testId);
   });
 
+  // Patient - update diary
+
+  // Patient - profile
+
   //------------------------------------------------------------------
   // OTHER PAGES
   //------------------------------------------------------------------
+
+  // Mission Statement
+
+  // About Us
 
   // Render 404 page for any unmatched routes
   app.get("*", function (req, res) {
     res.render("404");
   });
 
-};
+
+
+}
