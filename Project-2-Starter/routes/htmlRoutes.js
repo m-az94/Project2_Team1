@@ -68,6 +68,9 @@ module.exports = function (app) {
   });
 
   // Patient - update diary
+  app.get("/patient/:id/updatediary", function(req, res){
+    res.render("updateDiary");
+  })
 
   // Patient - profile
 
