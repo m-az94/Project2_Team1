@@ -47,6 +47,11 @@ module.exports = function (app) {
     res.render("deletePatient");
   });
 
+  // Doctor - view patient profile
+  app.get("/doctor/:id/patient/:id/profile", function(req, res){
+    res.render("doctorVpatientProfile");
+  })
+
   //------------------------------------------------------------------
   // PATIENT PAGES
   //------------------------------------------------------------------
@@ -78,7 +83,4 @@ module.exports = function (app) {
   app.get("*", function (req, res) {
     res.render("404");
   });
-
-
-
 }

@@ -31,7 +31,10 @@ body {
 
 /* Doctor Sign Up */
 
-/* Sign In */
+/* Doctor Sign In */
+#doctorSignIn{
+  text-align: center;
+}
 
 /* Create Patient */
 
@@ -45,12 +48,18 @@ body {
 /* Delete Patient */
 
 /* Doctor View Patient Profile */
+.responseForm{
+  border: 3px solid #0AA7E4;
+}
 
 /* ___PATIENT__SIDE___ */
 
 /* Patient Sign In */
 
 /* Patient Options */
+#patientOptions{
+  text-align: center;
+}
 
 /* Patient Diary */
 
