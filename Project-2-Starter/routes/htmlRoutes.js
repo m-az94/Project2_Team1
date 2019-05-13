@@ -2,10 +2,12 @@ var db = require("../models");
 var path = require("path");
 
 module.exports = function (app) {
-  
+
   // Load index page
   app.get("/", function (req, res) {
-    res.render("index");
+    res.render("index", {
+      msg: "Welcome to Our Homepage!"
+    });
   });
 
   //------------------------------------------------------------------
@@ -14,17 +16,23 @@ module.exports = function (app) {
 
   // Doctor - first view
   app.get("/doctor", function (req, res) {
-    res.render("doctor");
+    res.render("doctor", {
+      msg: "Doctor"
+    });
   });
 
   // Doctor - sign in
-  app.get("/doctor/signin", function (req, res) {
-    res.render("doctorSignIn");
+  app.get("/doctorSignIn", function (req, res) {
+    res.render("doctorSignIn", {
+      msg: "Enter your username and password"
+    });
   });
 
   // Doctor - sign up
-  app.get("/doctor/signup", function (req, res) {
-    res.render("doctorSignUp");
+  app.get("/doctorSignUp", function (req, res) {
+    res.render("doctorSignUp", {
+      msg: "Please fill in the form"
+    });
   });
 
   // Doctor - create patient
@@ -33,22 +41,22 @@ module.exports = function (app) {
   });
 
   // Doctor - confirm patient
-   app.get("/doctor/:id/confirmPatient", function(req, res){
+  app.get("/doctor/:id/confirmPatient", function (req, res) {
     res.render("confirmPatient");
   });
-  
+
   // Doctor - profile
-  app.get("/doctor/:id/profile", function(req, res){
+  app.get("/doctor/:id/profile", function (req, res) {
     res.render("doctorProfile");
   });
 
   // Doctor - delete patient
-  app.get("/doctor/:id/patient/:id/delete", function(req, res){
+  app.get("/doctor/:id/patient/:id/delete", function (req, res) {
     res.render("deletePatient");
   });
 
   // Doctor - view patient profile
-  app.get("/doctor/:id/patient/:id/profile", function(req, res){
+  app.get("/doctor/:id/patient/:id/profile", function (req, res) {
     res.render("doctorVpatientProfile");
   })
 
@@ -68,7 +76,7 @@ module.exports = function (app) {
   });
 
   // Patient - update diary
-  app.get("/patient/:id/updatediary", function(req, res){
+  app.get("/patient/:id/updatediary", function (req, res) {
     res.render("updateDiary");
   })
 
