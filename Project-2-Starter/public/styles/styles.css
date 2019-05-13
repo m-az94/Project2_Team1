@@ -15,6 +15,15 @@ body {
   background-color: rgb(2, 125, 129);
   height: 100%;
   padding-bottom: 40px
+  /*background: url("../img/bg.png");*/
+
+}
+#header{
+  background: #FFF;
+  height: 75px;
+  padding: 5px;
+  border-bottom: 5px solid #0AA7E4;
+  opacity:1.0;
 }
 
 .footer {
@@ -47,7 +56,29 @@ h2 {
 
 .form-group, .col {
   color: #f5f6de;
-  font-size: 1.5em
+  font-size: 1.5em;
+  color:#0AA7E4;
+}
+#hippologo{
+  height: 60px;
+}
+.navigation{
+  position: fixed;
+  padding-top: 20px;
+  font-size: 20px;
+  text-align: right;
+  color: #0AA7E4;
+}
+.body {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 30px;
+  background: #FFF;
+  border: 5px solid #0AA7E4;
+  opacity:1.0;
+}
+.title{
+  color: #0AA7E4;
 }
 
 .nav {
