@@ -3,7 +3,7 @@
 /* Quang's added */
 
 body {
-  background-color: rgb(2, 125, 129);
+  background-color:#393B28;
   height: 100%;
   margin: 0;
 }
@@ -12,17 +12,16 @@ body {
   position: relative
 }
 .container {
-  background-color: rgb(2, 125, 129);
-  height: 100%;
+  height: 90%;
   padding-bottom: 40px
   /*background: url("../img/bg.png");*/
 
 }
 #header{
-  background: #FFF;
-  height: 75px;
+  background:#00917C;
+  height: 105px;
   padding: 5px;
-  border-bottom: 5px solid #0AA7E4;
+  border-bottom: 5px solid #F2FEDC;
   opacity:1.0;
 }
 
@@ -32,9 +31,12 @@ body {
   padding-top: 10px;
   text-align: center;
   color: #f5f6de;
-  border-top-color: #f5f6de;
-  border-top-style: ridge;
-  border-width: 1px;
+  border-top: 5px solid #F2FEDC;
+  background: #00917C;
+  width: 100%;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
 }
 
 h1 {
@@ -45,7 +47,7 @@ h1 {
 }
 
 h2 {
-  color: #f5f6de;
+  color: #474838;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   text-align: center
 }
@@ -55,9 +57,8 @@ h2 {
 }
 
 .form-group, .col {
-  color: #f5f6de;
+  color: #474838;
   font-size: 1.5em;
-  color:#0AA7E4;
 }
 #hippologo{
   height: 60px;
@@ -67,24 +68,19 @@ h2 {
   padding-top: 20px;
   font-size: 20px;
   text-align: right;
-  color: #0AA7E4;
+  color: #f5f6de;
 }
 .body {
   margin-top: 30px;
   margin-bottom: 30px;
   padding: 30px;
-  background: #FFF;
-  border: 5px solid #0AA7E4;
+  background:#f5f6de;
+  border: 5px solid #00917C;
   opacity:1.0;
+  color: #474838;
 }
 .title{
   color: #0AA7E4;
-}
-
-.nav {
-  border-bottom-style: ridge;
-  border-width: 1px;
-  border-color: #f5f6de;
 }
 
 .nav-link {
