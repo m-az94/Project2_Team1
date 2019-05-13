@@ -1,6 +1,21 @@
 /* Main */
+
+/* Quang's added */
+
 body {
-  background: url("../img/bg.png");
+  background-color: rgb(2, 125, 129);
+  height: 100%;
+  margin: 0;
+}
+
+#logo {
+  position: relative
+}
+.container {
+  background-color: rgb(2, 125, 129);
+  height: 100%;
+  padding-bottom: 40px
+  /*background: url("../img/bg.png");*/
 
 }
 #header{
@@ -10,9 +25,39 @@ body {
   border-bottom: 5px solid #0AA7E4;
   opacity:1.0;
 }
-#logo{
+
+.footer {
+  height: 50px;
+  margin-top: 80px;
+  padding-top: 10px;
   text-align: center;
-  color:#0AA7E4
+  color: #f5f6de;
+  border-top-color: #f5f6de;
+  border-top-style: ridge;
+  border-width: 1px;
+}
+
+h1 {
+  color: #f5f6de;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 3em;
+  text-align: center
+}
+
+h2 {
+  color: #f5f6de;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: center
+}
+
+.row {
+  padding: 20px 0 20px 0
+}
+
+.form-group, .col {
+  color: #f5f6de;
+  font-size: 1.5em;
+  color:#0AA7E4;
 }
 #hippologo{
   height: 60px;
@@ -35,6 +80,22 @@ body {
 .title{
   color: #0AA7E4;
 }
+
+.nav {
+  border-bottom-style: ridge;
+  border-width: 1px;
+  border-color: #f5f6de;
+}
+
+.nav-link {
+  color: #f5f6de;
+  font-size: 1.2em;
+  text-align: end
+}
+
+
+/* End of Quang's */
+
 /* Index */
 #index{
   text-align: center;
@@ -43,11 +104,10 @@ body {
 /* ___DOCTOR__SIDE___ */
 
 /* Doctor Sign Up */
-
-/* Doctor Sign In */
-#doctorSignIn{
-  text-align: center;
+label {
+  color: #f5f6de
 }
+/* Doctor Sign In */
 
 /* Create Patient */
 

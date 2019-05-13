@@ -1,34 +1,57 @@
 <!DOCTYPE html>
 <html>
 
-<head> 
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="/styles/styles.css" media="screen" title="no title" charset="utf-8">
-  <title>Health Tracker</title>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="/styles/styles.css" media="screen" title="no title" charset="utf-8">
+	<!-- Custom Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Creepster|Germania+One|Signika" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Creepster" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato|Modak" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+
+	<title>Health Tracker</title>
 </head>
 
-<body>
 
-<body class="bkgrd">
-	
+
+<body>
+	<div class="container">
+
 		<div id="header">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-2"><img id="hippologo" src="https://media.worldslastchance.com/images/2013/05/04/11022/caduceus-alone.png"></div>
-					<div class="col-md-6"><h1 id="logo">Health Tracker</h1></div>
-					<div class="col-md-2"><a class="navigation" href="">Our Mission</a></div>
-					<div class="col-md-2"><a class="navigation" href="">About Us</a></div>
+
+			<div class="row">
+				<div id="logo" class="col-md-3">
+					<img src="./img/logo.png" alt="Smiley face" width="200" height="70">
 				</div>
+				<div class="col-md-6">
+					<h1>{{msg}}</h1>
+
+				</div>
+				<div class="col-md-3">
+					<ul class="nav">
+						<li class="nav-item">
+							<a class="nav-link" href="#">Our Mission</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">About Us</a>
+						</li>
+					</ul>
+				</div>
+
 			</div>
 		</div>
-	
-	<div class="container">
-    
+
 		{{{ body }}}
 
+		<div class="footer">
+			<p>Copyright ©</p>
+		</div>
 	</div>
+
 
 	<script src="/js/doctor.js"></script>
 </body>
