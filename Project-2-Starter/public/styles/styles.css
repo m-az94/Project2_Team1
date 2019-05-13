@@ -18,6 +18,10 @@ body {
 
 }
 #header{
+
+  //background: rgb(85, 226, 19);
+  //height: 75px;
+  // Will Test These if neccessary
   background:#00917C;
   height: 105px;
   padding: 5px;

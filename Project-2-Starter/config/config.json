@@ -2,6 +2,7 @@
   "development": {
     "username": "root",
     "password": "password",
+
     "database": "healthcare_db",
     "host": "localhost",
     "dialect": "mysql"
