@@ -58,7 +58,7 @@ module.exports = function (app) {
   // Doctor - view patient profile
   app.get("/doctor/:id/patient/:id/profile", function (req, res) {
     res.render("doctorVpatientProfile");
-  })
+  });
 
   //------------------------------------------------------------------
   // PATIENT PAGES
@@ -78,7 +78,7 @@ module.exports = function (app) {
   // Patient - update diary
   app.get("/patient/:id/updatediary", function (req, res) {
     res.render("updateDiary");
-  })
+  });
 
   // Patient - profile
 
