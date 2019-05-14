@@ -3,9 +3,23 @@
 // ----------------------------------------------------------------------------------
 module.exports = function(sequelize, DataTypes) {
     var  Prescriptions = sequelize.define("Prescriptions", {
-      patient_id: DataTypes.TEXT,
-      drug: DataTypes.STRING, 
-      frequency: DataTypes.TEXT
+      id: {
+        type: DataTypes.INTEGER,
+        autoIncrement: true,
+        primaryKey: true
+      },
+      patient_id: {
+        type: DataTypes.INTEGER,
+        allowNull:false
+      },
+      drug: {
+        type: DataTypes.STRING, 
+        allowNull: false
+      },
+      frequency: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+      }
     });
   
     Prescriptions.associate=function(models){
@@ -15,7 +29,7 @@ module.exports = function(sequelize, DataTypes) {
         }
       });
       Prescriptions.hasMany(models.Journal,{
-        onDelete: "" // figure it out
+        onDelete: "cascade"
       });
     };
     return Prescriptions;

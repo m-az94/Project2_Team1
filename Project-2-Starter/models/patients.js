@@ -3,12 +3,34 @@
 //-----------------------------------------------------
 module.exports = function(sequelize, DataTypes) {
     var  Patients = sequelize.define("Patients", {
-      name: DataTypes.STRING,
-      doctor: DataTypes.STRING,
-      city: DataTypes.STRING,
-      phone: DataTypes.TEXT,
-      email: DataTypes.STRING,
-      healthCard: DataTypes.TEXT
+      id:{
+        autoIncrement: true,
+        primaryKey:true,
+        type: DataTypes.INTEGER
+      },
+      name: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      doctor_id: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+      },
+      phone: {
+        type: DataTypes.STRING,
+        allowNull:false
+      },
+      email:{
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate:{
+          isEmail: true
+        }
+      },
+      healthCard: {
+        type: DataTypes.STRING,
+        allowNull: false
+      }
     });
   
     Patients.associate=function(models){
@@ -18,7 +40,7 @@ module.exports = function(sequelize, DataTypes) {
         }
       });
       Patients.hasMany(models.Prescriptions,{
-        onDelete: "" //need to figure out what to do
+        onDelete: "cascade" //need to figure out what to do
       });
     };
     return Patients;
