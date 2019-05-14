@@ -3,16 +3,33 @@
 //-----------------------------------------------------------------
 module.exports = function(sequelize, DataTypes) {
   var Doctors = sequelize.define("Doctors", {
-    name: DataTypes.STRING,
-    speciality: DataTypes.STRING,
-    city: DataTypes.STRING,
-    MINC: DataTypes.TEXT
+    id: {
+      autoIncrement: true,
+      primaryKey: true,
+      type: DataTypes.INTEGER
+    },
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    speciality: {
+      type:DataTypes.STRING,
+      allowNull: false
+    },
+    city: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    MINC: {
+      type: DataTypes.STRING,
+      allowNull: false
+    }
   });
 
   Doctors.associate = function(models){
     Doctors.hasMany(models.Patients,{
-      onDelete:"" //need to establish what to do with deleted doctor's patients
-    })
+      onDelete:"cascade" 
+    });
   };
   return Doctors;
 };

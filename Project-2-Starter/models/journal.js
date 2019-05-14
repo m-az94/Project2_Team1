@@ -4,9 +4,23 @@
 // ------------------------------------------------------
 module.exports = function(sequelize, DataTypes) {
     var  Journal = sequelize.define("Journal", {
-      prescription_id: DataTypes.TEXT,
-      has_Taken: DataTypes.BOOLEAN,
-      feedback: DataTypes.STRING
+      id:{
+        autoIncrement: true,
+        type: DataTypes.INTEGER,
+        primaryKey: true
+      },
+      prescription_id: {
+        type:DataTypes.INTEGER,
+        allowNull: false
+      },
+      has_Taken: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false
+      },
+      feedback: {
+        type: DataTypes.STRING,
+        allowNull: false
+      }
     });
   
     Journal.associate=function(models){
@@ -16,7 +30,7 @@ module.exports = function(sequelize, DataTypes) {
         }
       });
       Journal.hasMany(models.Response,{
-        onDelete: "Cascade" //delete everything
+        onDelete: "cascade" //delete everything
       });
     };
     return Journal;
