@@ -51,7 +51,7 @@ module.exports = function (app) {
   // Doctor - view patient profile
   app.get("/doctor/:id/patient/:id/profile", function (req, res) {
     res.render("doctorVpatientProfile");
-  })
+  });
 
   //------------------------------------------------------------------
   // PATIENT PAGES
