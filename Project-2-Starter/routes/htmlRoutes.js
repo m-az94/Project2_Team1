@@ -74,6 +74,9 @@ module.exports = function(app) {
   });
 
   // Patient - profile
+  app.get("/patient/:id/profile", function(req, res){
+    res.render("patientProfile");
+  });
 
   //------------------------------------------------------------------
   // OTHER PAGES

@@ -118,6 +118,9 @@ label {
 .patientBtn{
   width: 100%;
 }
+.docProfTitle{
+  color: #474838;
+}
 
 /* Delete Patient */
 
