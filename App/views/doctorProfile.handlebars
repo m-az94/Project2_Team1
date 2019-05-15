@@ -1,0 +1,13 @@
+<div class="body">
+    <h1 class="docProfTitle">Welcome, {{name}}!</h1>
+
+    <h2>Patients</h2>
+    <ul>
+        {{#each patient.name as |value key|}}
+            <li>
+                <button class="patientBtn btn btn-info" href="">{{value}}</button>
+                <button class="deleteBtn btn btn-outline-danger" href="">X</button>
+            </li>
+        {{/each}}
+    </ul>
+</div>
