@@ -3,10 +3,8 @@ var path = require("path");
 
 module.exports = function(app) {
   // Load index page
-  app.get("/", function(req, res) {
-    res.render("index", {
-      msg: "Welcome to Our Homepage!"
-    });
+  app.get("/", function (req, res) {
+    res.render("index");
   });
 
   //------------------------------------------------------------------
@@ -16,22 +14,18 @@ module.exports = function(app) {
   // Doctor - first view
   app.get("/doctor", function(req, res) {
     res.render("doctor", {
-      msg: "Doctor"
     });
   });
 
   // Doctor - sign in
-  app.get("/doctorSignIn", function(req, res) {
-    res.render("doctorSignIn", {
-      msg: "Enter your username and password"
-    });
+
+  app.get("/doctorSignIn", function (req, res) {
+    res.render("doctorSignIn");
   });
 
   // Doctor - sign up
-  app.get("/doctorSignUp", function(req, res) {
-    res.render("doctorSignUp", {
-      msg: "Please fill in the form"
-    });
+  app.get("/doctorSignUp", function (req, res) {
+    res.render("doctorSignUp");
   });
 
   // Doctor - create patient
