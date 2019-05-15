@@ -1,15 +1,14 @@
 {
   "development": {
     "username": "root",
-    "password": "",
-
+    "password": "password",
     "database": "healthcare_db",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "",
+    "password": "password",
     "database": "testdb",
     "host": "localhost",
     "dialect": "mysql",

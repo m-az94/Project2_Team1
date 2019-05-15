@@ -1,12 +1,13 @@
 USE `healthcare_db`;
+
+-- Seeding into Doctors
+INSERT INTO Doctors (fullname, speciality, city, MINC, email, pword)
+VALUES
+    ("Maria Azam", "Internal Medicine", "Brampron", "MD-00000000", "maria@isarealdoctor.ca", "arianalatte"),
+    ("David Ma", "Orthopedic Surgery", "Vaughan", "MD-00000001", "david@isarealsurgeon.com", "hypebeast"),
+    ("Quang Chieu", "Oncology", "Scarborough", "MD-00000002", "quang@treatsdiabetes.com", "quangisneverwrong"),
+    ("Alexis Corrieras", "Endocrinologist", "MD-00000004", "alexis@isfrench.com", "bagguetteboi");
+
 SELECT * FROM Doctors;
 
-INSERT INTO Doctors (name, speciality, city, MINC, createdAt, updatedAt) VALUES ('David', 'Urology', 'Mississauga', 'IJSD8273', '2019-04-27 17:18:07', '2019-04-27 17:18:07');
-INSERT INTO Doctors (name, speciality, city, MINC) VALUES ('Quang', 'Pediatrics', 'Markham', 'ACSD2314', '2019-04-27 17:18:07', '2019-04-27 17:18:07');
-INSERT INTO Doctors (name, speciality, city, MINC) VALUES ('Alexis', 'Dermatology', 'East Toronto', 'TTTT82739', '2019-04-27 17:18:07', '2019-04-27 17:18:07');
-INSERT INTO Doctors (name, speciality, city, MINC) VALUES ('Maria', 'Family Doctor', 'Brampton', 'AAAA82739', '2019-04-27 17:18:07', '2019-04-27 17:18:07');
-
-INSERT INTO Patients (name, doctor, address, phone, email, healthCard, createdAt, updatedAt) VALUES ('test_patient1', 'David', '123 Sample St', '647-111-1111', 'sample1@test.com','HEALTHCARD#232132','2019-04-27 17:18:07', '2019-04-27 17:18:07');
-INSERT INTO Patients (name, doctor, address, phone, email, healthCard, createdAt, updatedAt) VALUES ('test_patient2', 'Quang', '1244 Sample St', '647-111-1212', 'sample2@test.com','HEALTHCARD#87823','2019-04-27 17:18:07', '2019-04-27 17:18:07');
-INSERT INTO Patients (name, doctor, address, phone, email, healthCard, createdAt, updatedAt) VALUES ('test_patient3', 'Alexis', '1255 Sample St', '647-111-1313', 'sample3@test.com','HEALTHCARD#12312','2019-04-27 17:18:07', '2019-04-27 17:18:07');
-INSERT INTO Patients (name, doctor, address, phone, email, healthCard, createdAt, updatedAt) VALUES ('test_patient4', 'Maria', '1266 Sample St', '647-111-5151', 'sample4@test.com','HEALTHCARD#88977','2019-04-27 17:18:07', '2019-04-27 17:18:07');
+-- Seeding into 

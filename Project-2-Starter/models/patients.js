@@ -8,7 +8,7 @@ module.exports = function(sequelize, DataTypes) {
         primaryKey:true,
         type: DataTypes.INTEGER
       },
-      name: {
+      fullname: {
         type: DataTypes.STRING,
         allowNull: false
       },
@@ -28,6 +28,10 @@ module.exports = function(sequelize, DataTypes) {
         }
       },
       healthCard: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      pword:{
         type: DataTypes.STRING,
         allowNull: false
       }
