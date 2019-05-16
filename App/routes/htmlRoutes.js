@@ -58,7 +58,7 @@ module.exports = function(app) {
   //------------------------------------------------------------------
 
   // Patient - sign in
-  app.get("/patient/signin", function(req, res) {
+  app.get("/patientsignin", function(req, res) {
     res.render("patientSignIn");
   });
 

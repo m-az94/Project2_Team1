@@ -17,14 +17,3 @@
         <button type="submit" class="btn btn-secondary">Submit</button>
     </form>
 </div>
-
-{{!-- Grabbing form info --}}
-<script type="text/javascript">
-$("sumbit").on("click", function(event){
-    event.preventDefault();
-    var auth={
-        email: $("inputDocEmail").val().trim(),
-        password: $("inputDocPassword").val().trim()
-    };
-});
-</script>

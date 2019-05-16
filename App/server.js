@@ -7,47 +7,47 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
 
-var passport     = require('passport');
-var flash        = require('connect-flash');
-var cookieParser = require('cookie-parser');
-var session      = require('express-session'); // cookie session
+// var passport     = require('passport');
+// var flash        = require('connect-flash');
+// var cookieParser = require('cookie-parser');
+// var session      = require('express-session'); // cookie session
 
 var app = express();
 var PORT = process.env.PORT || 3000
 
 var db = require("./models");
 
-require('./config/passport')(passport); // pass passport for configuration
+// require('./config/passport')(passport); // pass passport for configuration
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
 
 app.engine("handlebars", exphbs({defaultLayout: "main"}));
-app.set("view engine","handlebars");
+app.set("view engine", "handlebars");
 
 //TODO: To be enabled when public folder is created.
 app.use(express.static("public"));
 
-app.use(cookieParser());
+// app.use(cookieParser());
 
-app.use(session({
-    key: 'user_sid',
-    secret: 'goN6DJJC6E287cC77kkdYuNuAyWnz7Q3iZj8',
-    resave: false,
-    saveUninitialized: false,
-    cookie: {
-        expires: 600000
-    }
-}));
+// app.use(session({
+//     key: 'user_sid',
+//     secret: 'goN6DJJC6E287cC77kkdYuNuAyWnz7Q3iZj8',
+//     resave: false,
+//     saveUninitialized: false,
+//     cookie: {
+//         expires: 600000
+//     }
+// }));
 
-app.use(passport.initialize());
-app.use(passport.session()); // persistent login sessions
-app.use(flash());
+// app.use(passport.initialize());
+// app.use(passport.session()); // persistent login sessions
+// app.use(flash());
 // app.use(methodO("_method"));
 
-require("./routes/apiRoutes")(app, passport);
-require("./routes/htmlRoutes")(app, passport);
+require("./routes/apiRoutes")(app);
+require("./routes/htmlRoutes")(app);
 
 db.sequelize.sync().then(function(){
     app.listen(PORT, function(){
