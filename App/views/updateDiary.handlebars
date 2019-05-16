@@ -2,7 +2,7 @@
     <h2>Create a Diary Entry</h2>
     <p>Select a drug: </p>
     {{#each prescription}}
-        <input type="radio" name="{{patientID}}" value="{{drug_name}}"><label> {{drug_name}}</label> <br>
+        <input type="radio" name="selectdrug" value="{{drug_id}}"><label> {{drug_name}}</label> <br>
     {{/each}}
 
     <br><br>

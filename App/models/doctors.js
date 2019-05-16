@@ -8,7 +8,7 @@ module.exports = function(sequelize, DataTypes) {
       primaryKey: true,
       type: DataTypes.INTEGER
     },
-    fullname: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false
     },
@@ -31,7 +31,7 @@ module.exports = function(sequelize, DataTypes) {
         isEmail: true
       }
     },
-    pword:{
+    password:{
       type: DataTypes.STRING,
       allowNull: false
     }
