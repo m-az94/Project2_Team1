@@ -21,7 +21,7 @@ body {
   background:#00917C;
   height: 105px;
   padding: 5px;
-  border-bottom: 5px solid #F2FEDC;
+  border-bottom: 3px solid #F2FEDC;
   opacity:1.0;
 }
 
@@ -31,7 +31,7 @@ body {
   padding-top: 10px;
   text-align: center;
   color: #f5f6de;
-  border-top: 5px solid #F2FEDC;
+  border-top: 3px solid #F2FEDC;
   background: #00917C;
   width: 100%;
   position: fixed;
@@ -78,6 +78,7 @@ h2 {
   border: 5px solid #00917C;
   opacity:1.0;
   color: #474838;
+  border-radius: 20px
 }
 .title{
   color: #0AA7E4;
@@ -87,6 +88,10 @@ h2 {
   color: #f5f6de;
   font-size: 1.2em;
   text-align: end;
+}
+
+img {
+  border-radius: 15%
 }
 /* End of Quang's */
 

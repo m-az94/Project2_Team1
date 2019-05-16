@@ -1,8 +1,18 @@
 <div class="body">
+    <h2 class="docProfTitle"> New Patient Created</h2>
+    <p class="docProfTitle">The following information was entered to create a new patient:</p>
+    <hr>
     <lable id="dp-name">Patient's Name: </lable>
+    <br>
     <lable id="dp-phone">Patient's Phone: </lable>
+
+    <br>
+    <lable id="dp-city">Patient's City: </lable>
+    <br>
     <lable id="dp-email">Patient's Email: </lable>
+    <br>
     <lable id="dp-healthcard">Patient's Healthcard Number: </lable>
+    <br>
 
     <div id="important">
         <p class="warning">DO NOT CLOSE THIS WINDOW UNTIL YOU HAVE COLLECTED THE FOLLOWING INFORMATION</p>
@@ -10,6 +20,7 @@
             The patient can log in with their email address and the password privided below. </p><br>
         <lable id="dp-password">Patient's Password: </lable>
     </div>
+
 
     <form>
         <label>Do you confirm that the above information is true? </label><br>
@@ -45,3 +56,8 @@ var password=$("<p>").val(newPatient.password);
 $("#dp-password").append(password);
 
 </script>
+    <a href="/doctor/:id/profile"><button class="btn btn-secondary">Back to My Profile</button></a>
+
+</div>
+<script type="text/javascript" src="../public/js/doctorCreatePatient.js"></script>
+

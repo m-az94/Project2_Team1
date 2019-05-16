@@ -1,0 +1,16 @@
+<div class="body">
+    <h1 class="docProfTitle">Prescription</h1>
+    <hr>
+    <form>
+        <label>Select a Patient: </label></br>
+        {{#each patient}}
+            <input type="radio" name="patient" value={{patient.id}}>
+            <label> {{patient.fullname}}</label>
+        {{/each}}
+        <label>Drug Name: </label>
+        <input type="text" class="form-control" placeholder="Please enter the name of drug here." id="inputPrescription"><br>
+        <label>Frequency (per day): </label>
+        <input type="text" class="form-control" placeholder="Please enter number of doses patient must take per day" id="inputFreq"><br>
+        <button type="submit" class="btn btn-secondary"  value="{{doctor_id}}" id="submitPrescription">Submit</button>
+    </form>
+    <script type="text/javascript" src="../public/js/doctorPrescribe.js"></script>

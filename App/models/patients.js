@@ -2,6 +2,7 @@
 // This is the model used when the doctor is creating a patient profile
 //-----------------------------------------------------
 module.exports = function(sequelize, DataTypes) {
+
   var Patients = sequelize.define("Patients", {
     id:{
       autoIncrement: true,
@@ -40,6 +41,7 @@ module.exports = function(sequelize, DataTypes) {
   Patients.associate=function(models){
     Patients.belongsTo(models.Doctors,{
       foreignKey: {
+
         allowNull: false
       }
     });

@@ -1,26 +1,32 @@
 // Create New Patient Account
-$("#add-account").on("click", function (event) {
+$("#create-patient").on("click", function (event) {
   event.preventDefault();
 
   // Make a newAccount object
   var newAccount = {
-    name: $("#inputName").val().trim(),
-    healthcard: $("#inputHealthCard").val().trim(),
-    phone: $("#inputPhone").val().trim(),
-    city: $("#inputCity").val().trim(),
-    email: $("#inputEmail").val().trim(),
-    password: $("#inputPassword").val().trim()
+    fullname: $("#p-name").val().trim(),
+    doctor_id: $("checkbox:checked").val(),
+    healthCard: $("#p-healthCard").val().trim(),
+    phone: $("#p-phone").val().trim(),
+    email: $("#p-email").val().trim(),
+    password: Math.floor(Math.random()*8999)+1000
   };
 
-  if (newAccount.password.length > 0 && newAccount.phone.length > 0 && newAccount.email.length > 0 && newAccount.city.length > 0 && newAccount.name.length > 0) {
+  if (newAccount.password.length > 0 && newAccount.phone.length > 0 && newAccount.email.length > 0 && newAccount.name.length > 0) {
     $.ajax({
-      type: "post",
-      url: "/signup",
+      type: "POST",
+      url: "/api/patients",
       data: newAccount
     }).then(function (data) {
-      window.location.href = "/"
+      window.location.href = "/doctor/"+newAccount.doctor_id+"/confirmPatient";
     });
   }else {
-    $("#create-err-msg").empty("").text("**Please fill out entire form**");
+    $("#err").empty("").text("**Please fill out entire form**");
   }
 });
+
+$(newAccount.fullname).append("#dp-name");
+$(newAccount.healthCard).append("#dp-healthcard");
+$(newAccount.phone).append("#dp-phone");
+$(newAccount.email).append("#dp-email");
+$(newAccount.password).append("dp-password");
