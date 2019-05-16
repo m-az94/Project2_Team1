@@ -29,29 +29,31 @@ module.exports = function(app) {
   });
 
   // Doctor - create patient
-  app.get("/doctor/:id/createpatient", function(req, res) {
+  app.get("/doctor/:idd/createpatient", function(req, res) {
     res.render("createPatient");
   });
 
   // Doctor - confirm patient
-  app.get("/doctor/:id/confirmPatient", function(req, res) {
+  app.get("/doctor/:idd/confirmPatient", function(req, res) {
     res.render("confirmPatient");
   });
 
   // Doctor - profile
-  app.get("/doctor/:id/profile", function(req, res) {
+  app.get("/doctor/:idd/profile", function(req, res) {
     res.render("doctorProfile");
   });
 
   // Doctor - delete patient
-  app.get("/doctor/:id/patient/:id/delete", function(req, res) {
+  app.get("/doctor/:idd/patient/:idp/delete", function(req, res) {
     res.render("deletePatient");
   });
 
   // Doctor - view patient profile
-  app.get("/doctor/:id/patient/:id/profile", function(req, res) {
+  app.get("/doctor/:idd/patient/:idp/profile", function(req, res) {
     res.render("doctorVpatientProfile");
   });
+
+  // Doctor - 
 
   //------------------------------------------------------------------
   // PATIENT PAGES
@@ -63,18 +65,18 @@ module.exports = function(app) {
   });
 
   // Patient - options
-  app.get("/patient/:id/options", function(req, res) {
+  app.get("/patient/:idp/options", function(req, res) {
     var testId = { userFirstName: "test user" };
     res.render("patientOptions", testId);
   });
 
   // Patient - update diary
-  app.get("/patient/:id/updatediary", function(req, res) {
+  app.get("/patient/:idp/updatediary", function(req, res) {
     res.render("updateDiary");
   });
 
   // Patient - profile
-  app.get("/patient/:id/profile", function(req, res){
+  app.get("/patient/:idp/profile", function(req, res){
     res.render("patientProfile");
   });
 
