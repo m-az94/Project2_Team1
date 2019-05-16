@@ -48,14 +48,14 @@ module.exports = function (app) {
   });
 
   // Doctor - view patient profile (Maria)
-  // app.get("/doctor/:id/patient/:id/profile", function (req, res) {
-  //   res.render("doctorVpatientProfile");
-  // });
-
-  // Doctor - view patient profile (Quang)
-  app.get("/doctorVpatientProfile", function (req, res) {
+  app.get("/doctor/:id/patient/:id/profile", function (req, res) {
     res.render("doctorVpatientProfile");
   });
+
+  // // Doctor - view patient profile (Quang)
+  // app.get("/doctorVpatientProfile", function (req, res) {
+  //   res.render("doctorVpatientProfile");
+  // });
 
   // -------------- Prescriptions page ------------------
 

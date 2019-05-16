@@ -89,6 +89,10 @@ h2 {
   font-size: 1.2em;
   text-align: end;
 }
+
+img {
+  border-radius: 15%
+}
 /* End of Quang's */
 
 .center{
