@@ -5,6 +5,7 @@
     <lable id="dp-name">Patient's Name: </lable>
     <br>
     <lable id="dp-phone">Patient's Phone: </lable>
+
     <br>
     <lable id="dp-city">Patient's City: </lable>
     <br>
@@ -20,7 +21,43 @@
         <lable id="dp-password">Patient's Password: </lable>
     </div>
 
+
+    <form>
+        <label>Do you confirm that the above information is true? </label><br>
+        <input type="radio" name="confirmpatient" value="true"><label> Yes</label>
+        <input type="radio" name="confirmpatient" value="false"><label> No</label>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+{{!---Javascript--------------------------------------------------------------------------}}
+<script type="text/javascript">
+var newPatient={
+    name: $("p-name").val().trim(),
+    phone: $("p-phone").val().trim(),
+    email: $("p-email").val().trim(),
+    healthcard: $("p-healthcard").val().trim();
+    password: Math.floor(Math.random()*10);
+};
+
+var name=$("<p>").val(newPatient.name);
+$("#dp-name").append(name);
+
+var phone=$("<p>").val(newPatient.phone);
+$("#dp-phone").append(phone);
+
+var email=$("<p>").val(newPatient.email);
+$("#dp-email").append(email);
+
+var healthcard=$("<p>").val(newPatient.healthcard);
+$("#dp-healthcard").append(healthcard);
+
+var password=$("<p>").val(newPatient.password);
+$("#dp-password").append(password);
+
+</script>
     <a href="/doctor/:id/profile"><button class="btn btn-secondary">Back to My Profile</button></a>
 
 </div>
 <script type="text/javascript" src="../public/js/doctorCreatePatient.js"></script>
+
