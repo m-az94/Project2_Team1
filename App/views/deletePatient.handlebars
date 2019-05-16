@@ -1,8 +1,14 @@
 <div class="body center">
-    <h2>Are you sure you want to delete {{patient}}?</h2>
+    <h1 class="docProfTitle">Delete a Patient</h1>
+    <hr>
     <form>
-        <input type="radio" name="delete" value="true"><label> Yes</label>
-        <input type="radio" name="delete" value="false"><label> No</label><br>
-        <button type="submit" class="btn btn-secondary" value="submit">Submit</button>
+        <label>Please select the patient you would like to delete: </label>
+        {{#each patient}}
+            <input type="radio" name="patient" value={{patient.id}}>
+            <label> {{patient.fullname}}</label>
+        {{/each}}
+        <br>
+        <button type="submit" class="btn btn-secondary" value="{{doc_id}}" id="deletePatient">DELETE THIS PATIENT</button>
     </form>
 </div>
+<script type="text/javascript" src="../public/js/doctorDeletePatient.js"></script>

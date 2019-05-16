@@ -5,9 +5,9 @@
     <h3>Patient Updates</h3>
     {{!-- {{#each prescription}} --}}
     <div class="row">
-        {{prescription.drug_name}}
+        {{prescription.drug}}
         <div class="col-md-8">
-            <p>journal entries go here</p>
+            {{!-- <p>journal entries go here</p> --}}
             {{!-- journal entries go here --}}
             {{#each journal}}
                 {{#unless response}}
@@ -15,21 +15,14 @@
                 <p>Entry: {{journal.entry}}</p>
                 <form class="responseForm">
                     <p>How would you like to respond?</p>
-                    <input type="radio" name="{{journal.id}}" value="true">
+                    <input type="radio" name="journal" value="true">
                         <label> Everything is fine</label><br> 
-                    <input type="radio" name="{{journal.id}}" value="false"> 
-                        <label> Please make an appointment</label>
+                    <input type="radio" name="journal" value="false"> 
+                        <label> Please make an appointment</label><br>
+                    <button type="submit" class="btn btn-secondary" id="response" value="{{journal.id}}" data-doctorID="{{doctor_id}}" data-patientID="{{patient_id}}"></button>
                 </form>
                 {{/unless}}
             {{/each}}
         </div>
-        <div class="col-md-4">
-            <p>Charts go here</p>
-            {{!-- ^testing columns --}}
-            {{chart}}
-        </div>
-    </div>
-    {{!-- {{/each}} --}}
-{{!-- EACH COMMENTED OUT TO TEST COLUMNS --}}
-
 </div>
+<script type="text/javascript" src="../public/js/doctorResponse.js"></script>
