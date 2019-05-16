@@ -1,6 +1,7 @@
 {{!-- Create Patient --}}
 <form class="body">
   <h2>Basic Profile</h2>
+  <p id="err"></p>
 
     <label>Name: </label>
     <input type="text" class="form-control" placeholder="Enter patient's name here" id="p-name"><br>
@@ -17,9 +18,10 @@
     <label>Please check the box if you confirm this information:</label>
     <input type="checkbox" value="{{doctor_id}}"><label> I confirm that this information is true</label>
     
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary" id="create-patient">Submit</button>
   
   </form>
+  <script type="text/javascript" src="../public/js/doctorCreatePatient.js"
 
 {{!-- Notes for Alexis 
 -> Don't do ajax call for this page! Submit for this page goes to confirmPatient.handlebars!

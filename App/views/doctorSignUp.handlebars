@@ -2,6 +2,7 @@
 <div class="body">
   <h2 class="center">Sign Up</h2>
   <p class="center">To sign up, please fill out the form below. If you are already registered with us, please click <a href="/doctorSignIn">here</a> to sign in.</p>
+  <p id="err"></p>
   <form>
   
       <label>Name: </label>
@@ -11,12 +12,19 @@
       <input type="text" class="form-control" placeholder="Enter your speciality here" id="d-speciality"><br>
 
       <label>Location: </label>
-      <input type="text" class="form-control" placeholder="Enter your city here" id="d-city"><br>
+      <input type="text" class="form-control" placeholder="Enter the city you are situated in" id="d-city"><br>
       
       <label>Medical Identification Number of Canada: </label>
       <input type="text" class="form-control" placeholder="Enter MINC here" id="d-minc"><br>
+
+      <label>Email: </label>
+      <input type="text" class="form-control" placeholder="Enter your email address here" id="d-email"><br>
+
+      <label>Password: </label>
+      <input type="text" class="form-control" placeholder="Enter your password here" id="d-password"><br>
       
-      <button type="submit" class="btn btn-secondary">Submit</button>
+      <button type="submit" class="btn btn-secondary" id="newDoctor">Submit</button>
 
     </form>
   </div>
+  <script type="text/javascript" src="../public/js/doctorSignUp.js"></script>

@@ -2,16 +2,18 @@
 $("#submitPrescription").on("click", function(event){
     event.preventDefault();
 
-    var newDiaryEntry={
-        drug=$("input:radio[name='selectdrug']:checked").val(),
-        isTaken=$("input:radio[name='freqCheck']:checked").val(),
-        feedback=$("#newDiary").val().trim()
+    var doctor_id=$("submitPrescription").val();
+
+    var newPrescription={
+        patientID=$("input:radio[name='patient']:checked").val(),
+        drug=$("#inputPrescription").val().trim(),
+        frequency=$("#inputFreq").val().trim()
     };
     $.ajax({
         type: "POST",
         url: "/api/journal",
-        data: newDiaryEntry
+        data: newPrescription
     }).then(function(data){
-        window.location.href="/patient/:idp/profile"
+        window.location.href="/patient/"+doctor_id+"/profile";
     });
 });
