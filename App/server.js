@@ -1,56 +1,58 @@
-//Starting point of Node Express server.
-
-require("dotenv").config();
-
-//Dependencies
 var express = require("express");
+var app = express();
+var passport = require("passport");
+var session = require("express-session");
 var bodyParser = require("body-parser");
+require("dotenv").load();
 var exphbs = require("express-handlebars");
 
-var passport     = require('passport');
-var flash        = require('connect-flash');
-var cookieParser = require('cookie-parser');
-var session      = require('express-session'); // cookie session
 
-var app = express();
-var PORT = process.env.PORT || 3000
 
-var db = require("./models");
-
-require('./config/passport')(passport); // pass passport for configuration
-
-app.use(bodyParser.urlencoded({extended:true}));
+//For BodyParser
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 
-app.engine("handlebars", exphbs({defaultLayout: "main"}));
-app.set("view engine","handlebars");
-
-//TODO: To be enabled when public folder is created.
-app.use(express.static("public"));
-
-app.use(cookieParser());
-
-app.use(session({
-    key: 'user_sid',
-    secret: 'goN6DJJC6E287cC77kkdYuNuAyWnz7Q3iZj8',
-    resave: false,
-    saveUninitialized: false,
-    cookie: {
-        expires: 600000
-    }
-}));
-
+// For Passport
+app.use(session({ secret: "keyboard cat",resave: true, saveUninitialized:true})); // session secret
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
-app.use(flash());
-// app.use(methodO("_method"));
 
+
+//For Handlebars
+app.set("views", "./views");
+app.engine("handlebars", exphbs({defaultLayout: "main"}));
+app.set("view engine", "handlebars");
+app.use(express.static("public"));
+
+
+// app.get("/", function(req, res){
+//   res.send("Welcome to Passport with Sequelize");
+// });
+
+
+//Models
+var db = require("./models");
+
+
+//Routes
+require("./routes/auth.js")(app, passport);
 require("./routes/apiRoutes")(app, passport);
 require("./routes/htmlRoutes")(app, passport);
 
-db.sequelize.sync().then(function(){
-    app.listen(PORT, function(){
-        console.log("Listening on localhost:" + PORT);
-    })
-})
+
+//load passport strategies
+require("./config/passportdoctor.js")(passport, db.Doctors);
+require("./config/passportpatient.js")(passport, db.Patients);
+
+//Sync Database
+db.sequelize.sync().then(function() {
+  console.log("Nice! Database looks fine");
+  }).catch(function(err){
+  console.log(err, "Something went wrong with the Database Update!");;
+  });
+app.listen(5000, function(err){
+  if(!err)
+    console.log("Site is live"); else console.log(err);
+
+});

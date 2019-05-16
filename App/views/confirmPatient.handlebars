@@ -1,7 +1,6 @@
 <div class="body">
     <lable id="dp-name">Patient's Name: </lable>
     <lable id="dp-phone">Patient's Phone: </lable>
-    <lable id="dp-city">Patient's City: </lable>
     <lable id="dp-email">Patient's Email: </lable>
     <lable id="dp-healthcard">Patient's Healthcard Number: </lable>
 
@@ -25,7 +24,6 @@
 var newPatient={
     name: $("p-name").val().trim(),
     phone: $("p-phone").val().trim(),
-    city: $("p-city").val().trim(),
     email: $("p-email").val().trim(),
     healthcard: $("p-healthcard").val().trim();
     password: Math.floor(Math.random()*10);
@@ -37,9 +35,6 @@ $("#dp-name").append(name);
 var phone=$("<p>").val(newPatient.phone);
 $("#dp-phone").append(phone);
 
-var city=$("<p>").val(newPatient.city);
-$("#dp-city").append(city);
-
 var email=$("<p>").val(newPatient.email);
 $("#dp-email").append(email);
 
@@ -50,9 +45,3 @@ var password=$("<p>").val(newPatient.password);
 $("#dp-password").append(password);
 
 </script>
-
-{{!-- NOTES FOR ALEXIS --}}
-{{!-- 
--> javascript for sumbit button and ajax call need to be made for this page!
--> they can be done on a seperate JS file
- --}}
